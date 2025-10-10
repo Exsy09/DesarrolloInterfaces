@@ -14,8 +14,12 @@ body {
 .caja {
   width: 200px;
   height: 100px;
+
   /*border: unset; /* Elimina la regla definida: equivale a 'initial' si no es heredable */
   /* border: 2px solid black; */
+
+  border: unset; /* Elimina la regla definida: equivale a 'initial' si no es heredable */
+
   padding: 20px;
   margin: 20px;
 }
@@ -24,7 +28,11 @@ h2 {
 }
 
 p {
+
   color: inherit;   /* No ocurre nada porque los bordes no son heredables */
+
+  color: initial;   /* Vuelve al valor inicial por defecto del navegador (normalmente negro) */
+
 }
 
   </style>
