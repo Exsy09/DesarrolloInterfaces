@@ -6,7 +6,11 @@
   <style>
     /* Selector de etiqueta */
     div {
+
+      background: lightgray !important; /* Ahora tiene prioridad sobre id */
+
       background: lightgray;
+
       color: black;
       padding: 10px;
     }
@@ -18,17 +22,30 @@
 
     /* Selector de id */
     #element {
+
+      background: lightgreen;  /* Tiene la prioridad */
+    }
+
+    /* Selector combinado */
+    section .container {
+      background: yellow; 
+
       background: lightgreen;
     }
 
     /* Selector combinado */
     section .container p {
       background: yellow;
+
     }
 
     /* Con !important */
     .forzado {
+
+      background: orange !important; /* !important tiene siempre prioridad sobre el resto */
+
       background: orange !important;
+
     }
   </style>
 </head>

@@ -1,0 +1,26 @@
+main {
+	
+	display: grid;   /* los hijos inmediatamente descendientes serán parte de la cuadrícula.*/
+	padding: 1rem;
+	grid-gap: 1rem; /* Canal de rejilla de 1rem para separar los elementos de la cuadrícula.*/
+	grid-template-columns: repeat(3, 200px);
+        /* Definir el número de columnas y el ancho de las mismas. 
+        En este caso se han definido 3 columnas de 200px cada una. */
+	    /* Función "repeat()", cuyo primer argumento es el número de repeticiones
+         y el segundo argumento es la unidad a repetirse. */
+	grid-template-rows: 150px 150px;
+        /* Definir el número de filas. En nuestro ejemplo hemos definido
+         2 filas de 150px cada una. */
+	font-size: 5rem;
+
+  }
+ 
+  div {
+	background-color: rebeccapurple;
+	color: white;
+	padding: 1rem;
+  }
+        /* Colocar de forma esperada elementos extra, como es este caso
+        ya que hemos definido 2 filas pero hemos incluido un séptimo elemento
+        que se coloca en una tercera fila no definida. Y su altura, al no estar especificada,
+        sería la que ocupase el contenido de la celda.*/

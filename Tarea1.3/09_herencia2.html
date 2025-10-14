@@ -9,27 +9,37 @@ body {
   color: blueviolet;
   border: 1px dashed gray
 }
+
 .caja {
   width: 200px;
   height: 100px;
+  /*border: unset;  /* Al quitarlo añade un borde */
   border: unset;  /* Elimina la regla definida: equivale a 'initial' si no es heredable */
   padding: 20px;
   margin: 20px;
 }
+
 p {
   color: inherit;    /* Fuerza a heredar el color del padre (body o contenedor) */
 }
 section { 
-    color: inherit; 
-    border: inherit;
+  color: inherit; 
+  border: inherit;
 }
 article {
-    border: inherit; 
+  border: inherit;
+  color: initial;  /* Lo cambia todo a negro */
 }
+
+span {
+  color: inherit;   /* Cambia a morado, porque hereda del padre, que es article, que hereda de section y este de body */
+  border: inherit; 
+}
+
 span {
   color: initial;   /* Vuelve al valor inicial por defecto del navegador (normalmente negro) */
 }
-  </style>
+</style>
 </head>
 <body>
     <h2>Noticias</h2>
