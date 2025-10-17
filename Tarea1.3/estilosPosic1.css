@@ -37,7 +37,7 @@ footer {
  	position: relative; /*"elimino" la posicion relative del contenedor*/
 	border: 3px dotted lightgray;
 	display: flex;
-	flex-flow: column wrap; /*con display:flex y flex-flow:row wrap distribuimos los elementos de forma fluida (no desbordan el espacio)*/
+	flex-flow: column wrap; /*Cambiamos en este orden: a row-reverse y despues a column*//*con display:flex y flex-flow:row wrap distribuimos los elementos de forma fluida (no desbordan el espacio)*/
 	height: 350px;
 	margin-top: 10%;
 }
