@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <link rel="stylesheet" href="estilosPosic3.css">
+      <script>
+    	function cambiarZ(elemento) {
+        	  var valor = document.getElementById("zInd").value;
+        	  var obj = document.querySelector(elemento);
+        	  obj.style.zIndex=valor;
+        	  document.querySelector(elemento+" > p").innerHTML="z-index: "+valor;
+    	}
+    	function mostrarValor() {
+        	  var valor = document.getElementById("zInd").value;
+        	  document.getElementById("vZInd").innerHTML=valor;
+    	}
+      </script>
+  </head>
+  <body>
+      <div class="contenedor c1">
+    	<div class="caja h1"><h2>Caja 1</h2><p>z-index: 0</p></div>
+    	<div class="caja h2"><h2>Caja 2</h2><p>z-index: 0</p></div>
+    	<div class="caja h3"><h2>Caja 3</h2><p>z-index: 0</p></div>
+    	<p>z-index: 0</p>
+      </div>
+      <div class="contenedor c2"><h2>Contenedor 2</h2><p>z-index: 0</p></div>
+      <div class="contenedor c3"><h2>Contenedor 3</h2><p>z-index: 0</p></div>
+      <div class="control">
+    	<fieldset>
+        	  <legend>z-index:</legend>
+        	  <span>Selecciona un valor de <code>z-index</code> y presiona el botón de la caja correspondiente para aplicarlo:</span>
+        	  <br>
+        	  <label for="zInd">z-index:</label> <input type="range" min="0" max="6" value="0" id="zInd" onchange="mostrarValor()"> <span id="vZInd">0</span>
+        	  <br>
+        	  <button onclick="cambiarZ('.h1')">Cambiar Caja 1</button>
+        	  <button onclick="cambiarZ('.h2')">Cambiar Caja 2</button>
+        	  <button onclick="cambiarZ('.h3')">Cambiar Caja 3</button>
+        	  <br>
+        	  <button onclick="cambiarZ('.c1')">Cambiar Contenedor 1</button>
+        	  <button onclick="cambiarZ('.c2')">Cambiar Contenedor 2</button>
+        	  <button onclick="cambiarZ('.c3')">Cambiar Contenedor 3</button>
+    	</fieldset>
+      </div>
+  </body>
+</html>
