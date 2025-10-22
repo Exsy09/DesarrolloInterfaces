@@ -44,6 +44,7 @@
     	20px 20px 2px 4px #ffe417,
     	30px 30px 3px 5px #23ff17,
     	40px 40px 4px 6px #174dff;
+  transition-delay: 3s; /*Delay de 3 egundos*/
 }
 .c5:hover {
   box-sizing: border-box;
