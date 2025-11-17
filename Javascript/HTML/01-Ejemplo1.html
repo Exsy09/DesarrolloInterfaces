@@ -11,12 +11,24 @@
                 Una con 'var' que podermos usar fuera del IF
                 y otra 'let' que solo podremos usar dentro del IF */
                 var modeloCoche = "ZS";
+                let versionCoche = "luxury";
+
+                console.log("Dentro del IF");
+                console.log("Marca", marcaCoche);
+                console.log("Modelo", modeloCoche);
+                console.log("Versión", versionCoche);
             }
 
+            console.log("Fuera del IF");
+            console.log("Marca", marcaCoche);
+            console.log("Modelo", modeloCoche);
+            console.log("Versión", versionCoche);
+            console.log("El" + marcaCoche + modeloCoche + "tiene varias versiones, pero no puede ver cual seleccionaste" + versionCoche);
 
         </script>
     </head>
     <body>
-        
+        <h2>Demo JAVASCRIPT en &lt; Head &gt;</h2>
+        <p>Abre la consola para ver el resultado</p>
     </body>
 </html>
