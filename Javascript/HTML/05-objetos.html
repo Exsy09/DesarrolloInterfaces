@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<script>
+    // Un objeto en JavaScript es una lista de pares "clave:valor" separadas por , dentro de {}
+    // Se pueden crear de diferentes maneras
+    const persona = {
+        nombre: "Juan",
+        apellido: "Nadie",
+        edad: 25,
+    };
+    // También podríamos crearlo así
+    const persona2 = {};
+    // Y añado sus propiedades después:
+    persona2.nombre = "Fermín";
+    persona2.apellido = "Trujillo";
+    persona2.edad = 33;
+    persona.colorDeOjos = "Verdes";
+    // O creando una instancia de "Object"
+    const persona3 = new Object();
+    // Y luego rellenando sus propiedades:
+    persona3.nombre = "Antonio";
+    persona3.primerApellido = "Recío";
+    persona3.segundoApellido = "Matamoros";
+
+    // También podemos crear un constructor
+    function Persona(nombre, primerApellido, segundoApellido) {
+        this.nombre = nombre;
+        this.primerApellido = primerApellido;
+        this.segundoApellido = segundoApellido;
+    }
+    // Para luego crear un objeto utilizando dicho constructor
+    const persona4 = new Persona("Amador", "Rivas", "Borderline");
+    // Podemos acceder a las propiedades de un objeto de 2 maneras diferentes:
+    console.log("1ª Persona: " + persona.nombre + " " + persona["apellido"]);
+    console.log("2ª Persona: " + persona2.nombre + " " + persona2.apellido);
+    console.log(
+        "3ª Persona: " +
+        persona3["nombre"] +
+        " " +
+        persona3["primerApellido"] +
+        " " +
+        persona3["segundoApellido"]
+    );
+    // También podemos eliminar propiedades de un objeto
+    console.log("Edad 1ª persona: " + persona.edad);
+    delete persona.edad;
+    // Si devuelve "undefined" la condición se evalua a "false“
+    // El siguiente "if" también se podría escribir así:
+    // if (typeof(persona.edad)!="undefined")
+    if (persona.edad) {
+        console.log("Edad 1ª persona: " + persona.edad);
+    } else {
+        console.log('Se eliminó la propiedad "edad" de la 1ª persona.');
+    }
+
+    const ObjetoAlumno = {
+        //Asi se crea un objeto con una funcion dentro, las funciones dentro de objetos se llaman metodos
+        nombre: "Ruben",
+        apellido: "Escarpa",
+        saludar: function() {
+            console.log("Hola soy: " + this.nombre + " " + this.apellido);
+        }
+    }
+
+    ObjetoAlumno.saludar()
+
+    let Cuenta = {
+        titular : "Ruben",
+        saldo : 10.0,
+        ingresar: function(cantidad){
+            this.saldo += cantidad
+        },
+
+        mostrarSaldo : function(){
+            console.log("Saldo actual: " + this.saldo);
+            
+        }
+    }
+
+    Cuenta.ingresar(-8);
+    Cuenta.mostrarSaldo();
+
+    let alumno = {
+        nombre: "Carlos",
+        "nota final": 0.5
+    };
+    console.log("Notación punto alumno.nombre: ", alumno.nombre);
+    console.log("Notación corchete alumno[nota final]: , ", alumno, "nota final[]");
+
+    let clave = "nombre";
+    console.log("Acceso usando variable clave: ", alumno.clave)
+
+</script>
+
+<body>
+    <h1>Objetos</h1>
+</body>
+
+</html>
