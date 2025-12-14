@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Tarea 2.5</title>
+    <meta charset="UTF-8">
+</head>
+<script>
+    // 1. Obtener el elemento <ul>
+    const lista = document.getElementById("lista");
+
+    // 2. Obtener todos los elementos con clase "item"
+    const items = document.querySelectorAll(".item");
+
+    // 3. Mostrar el texto de cada tarea por consola
+    for (let i = 0; i < items.length; i++) {
+        console.log(items[i].textContent);
+    }
+// -----------------------------------------------------------------------------------
+    // 4. Crear un nuevo elemento <li>
+    const nuevaTarea = document.createElement("li");
+
+    // 5. Asignar texto
+    nuevaTarea.textContent = "tarea creada dinámicamente";
+
+    // 6. Añadir la clase "item"
+    nuevaTarea.classList.add("item");
+
+    // 7. Insertar el elemento en la lista
+    lista.appendChild(nuevaTarea);
+// ---------------------------------------------------------------------------------------------
+    // 8. Seleccionar todos los ítems
+    const tareas = document.querySelectorAll("#lista li");
+
+    if (tareas.length > 0) {
+        // Seleccionar el último elemento
+        const ultimaTarea = tareas[tareas.length - 1];
+        ultimaTarea.remove();
+    } else {
+        console.log("No hay tareas para borrar");
+    }
+// -------------------------------------------------------------------------------------------
+    // EXTRA
+    const lista1 = document.getElementById("lista");
+    const btnAgregar = document.getElementById("btn-agregar");
+    const btnBorrar = document.getElementById("btn-borrar");
+
+    // Evento para agregar tarea
+    btnAgregar.addEventListener("click", () => {
+        const nuevaTarea = document.createElement("li");
+        nuevaTarea.textContent = "tarea creada dinámicamente";
+        nuevaTarea.classList.add("item");
+        lista.appendChild(nuevaTarea);
+    });
+
+    // Evento para borrar última tarea
+    btnBorrar.addEventListener("click", () => {
+        const tareas = document.querySelectorAll("#lista li");
+        if (tareas.length > 0) {
+            tareas[tareas.length - 1].remove();
+        } else {
+            console.log("No hay tareas para borrar");
+        }
+    });
+
+</script>
+    <h2 id="titulo">Panel de Tareas</h2>
+    <ul id="lista">
+        <li class="item">Tarea 1</li>
+        <li class="item">Tarea 2</li>
+    </ul>
+    <button id="btn-agregar">Agregar Tarea</button>
+    <button id="btn-borrar">Borrar última Tarea</button>
+
+</html>
