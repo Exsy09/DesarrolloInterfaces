@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.card {
+  background: white;
+  max-width: 420px;
+  margin: auto;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 14px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 6px;
+}
+
+textarea {
+  resize: none;
+}
+
+.h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.msg {
+  display: block;
+  font-size: 0.85em;
+  margin-top: 4px;
+}
+
+/* ===== MENSAJES ===== */
+.msg-error {
+  color: red;
+}
+
+.msg-ok {
+  color: green;
+}
+
+/* ===== CAMPOS ===== */
+.campo-error {
+  border: 2px solid red;
+}
+
+.campo-ok {
+  border: 2px solid green;
+}
+
+/* ===== MÓDULOS / CHECKBOX ===== */
+.modulo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.modulo input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+/* ===== BOTONES ===== */
+.botonera {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
